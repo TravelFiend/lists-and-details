@@ -1,5 +1,5 @@
-export default () => {
-  return fetch('https://hey-arnold-api.herokuapp.com/api/v1/characters')
+export default (pageNum) => {
+  return fetch(`https://hey-arnold-api.herokuapp.com/api/v1/characters?page=${pageNum}`)
     .then(res => res.json());
 };
 
