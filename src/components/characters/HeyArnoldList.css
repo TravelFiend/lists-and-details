@@ -1,0 +1,27 @@
+.Ul {
+  padding: 30px;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    background: #E4E5C0;
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 20px;
+  }
+
+  img {
+    max-height: 170px;
+    margin: 15px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+}
