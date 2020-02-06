@@ -24,7 +24,11 @@ const OneCharacter = ({ match }) => {
 };
 
 OneCharacter.propTypes = {
-  match: PropTypes.object
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string.isRequired
+    })
+  }).isRequired
 };
 
 export default OneCharacter;
