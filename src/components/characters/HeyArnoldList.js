@@ -4,11 +4,15 @@ import styles from './HeyArnoldList.css';
 import HeyArnoldItem from './HeyArnoldItem';
 
 const HeyArnoldList = ({ characters, onClick }) => {
-  const heyElements = characters.map(({ name, image, _id }) => (
-    <li key={name} name={name}>
-      <HeyArnoldItem id={_id} name={name} image={image}  onClick={onClick}/>
-    </li>
-  ));
+  const heyElements = characters.map(({ name, image }) => {
+    const underscoreName = name.replace(/\s/g, '_');
+
+    return (
+      <li key={name} name={name}>
+        <HeyArnoldItem id={underscoreName} name={name} image={image}  onClick={onClick}/>
+      </li>
+    );
+  });
 
   return (
     <>

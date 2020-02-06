@@ -6,10 +6,11 @@ import styles from './OneCharacter.css';
 
 const OneCharacter = ({ match }) => {
   const [character, setCharacter] = useState({});
+  console.log(character);
 
   useEffect(() => {
     CharacterDetail(match.params.id)
-      .then(character => setCharacter(character));
+      .then(character => setCharacter(character[0]));
   }, [match.params.id]);
 
   return (
@@ -18,6 +19,7 @@ const OneCharacter = ({ match }) => {
       <section>
         <h2>{character.name}</h2>
         <img src={character.image} />
+        <p>{character.description}</p>
       </section>
     </div>
   );

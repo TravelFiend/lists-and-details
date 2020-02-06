@@ -12,7 +12,7 @@ const HeyArnold = () => {
 
   const fetch = () => {
     getApiData(pageNum)
-      .then(characters => setCharacters(characters));
+      .then(characters => setCharacters(characters.results));
   };
 
   useEffect(() => {
@@ -45,10 +45,6 @@ const HeyArnold = () => {
       <HeyArnoldList onClick={handleClick} characters={characters} />
     </main>
   );
-};
-
-HeyArnold.propTypes = {
-  match: PropTypes.object
 };
 
 export default HeyArnold;
