@@ -24,14 +24,14 @@ class HeyArnold extends Component {
     this.setState({ oneChar: target.value });
   }
 
-  handleBackClick() {
+  handleBackClick = () => {
     if(this.state.pageNum === 1){
       return;
     }
     this.setState((prevState) => ({ pageNum: prevState.pageNum - 1 }));
   }
 
-  handleForwardClick() {
+  handleForwardClick = () => {
     if(this.state.pageNum === 11){
       return;
     }
@@ -42,7 +42,7 @@ class HeyArnold extends Component {
     return (
       <main>
         <Header />
-        <Paging pageNum={this.state.pageNum} onBackClick={this.handleBackClick} onForwardClick={this.handleForwardClick} />
+        <Paging pageNum={this.state.pageNum} handleBackClick={this.handleBackClick} handleForwardClick={this.handleForwardClick} />
         <HeyArnoldList onClick={this.handleClick} characters={this.state.characters} />
       </main>
     );
