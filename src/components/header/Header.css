@@ -1,0 +1,24 @@
+.Header {
+  background: #E4E5C0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid black;
+
+  h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    font-size: 40px;
+  }
+
+  a {
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #004B32;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: blue;
+  }
+}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { CharacterDetail } from '../../services/getApiData';
+import Header from '../header/Header';
 import PropTypes from 'prop-types';
 import styles from './OneCharacter.css';
 
@@ -12,10 +13,13 @@ const OneCharacter = ({ match }) => {
   }, [match.params.id]);
 
   return (
-    <section className={styles.Sect} >
-      <h2>{character.name}</h2>
-      <img src={character.image} />
-    </section>
+    <div className={styles.Container}>
+      <Header />
+      <section>
+        <h2>{character.name}</h2>
+        <img src={character.image} />
+      </section>
+    </div>
   );
 };
 
