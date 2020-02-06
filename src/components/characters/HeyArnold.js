@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import Header from '../header/Header';
 import getApiData from '../../services/getApiData';
 import HeyArnoldList from './HeyArnoldList';
 import Paging from '../paging/Paging';
 
-const HeyArnold = ({ match }) => {
+const HeyArnold = () => {
   const [characters, setCharacters] = useState([]);
-  const [oneChar, setOneChar] = useState('');
+  const [, setOneChar] = useState('');
   const [pageNum, setPageNum] = useState(1);
 
   const fetch = () => {
-    getApiData()
+    getApiData(pageNum)
       .then(characters => setCharacters(characters));
   };
 
   useEffect(() => {
-    fetch();
-  }, []);
+    fetch(pageNum);
+  }, [pageNum]);
 
 
   const handleClick = ({ target }) => {
@@ -44,6 +45,10 @@ const HeyArnold = ({ match }) => {
       <HeyArnoldList onClick={handleClick} characters={characters} />
     </main>
   );
+};
+
+HeyArnold.propTypes = {
+  match: PropTypes.object
 };
 
 export default HeyArnold;
