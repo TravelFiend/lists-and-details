@@ -1,16 +1,35 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import Header from '../header/Header';
+import getApiData from '../../services/getApiData';
 import HeyArnoldList from './HeyArnoldList';
 
-const HeyArnold = ({ characters, onClick }) => (
-  <div>
-    <HeyArnoldList onClick={onClick} characters={characters} />
-  </div>
-);
+class Final extends Component {
+  state = {
+    characters: [],
+    oneChar: ''
+  }
 
-HeyArnold.propTypes = {
-  characters: PropTypes.array.isRequired,
-  onClick: PropTypes.func.isRequired
-};
+  componentDidMount(){
+    this.fetch();
+  }
 
-export default HeyArnold;
+  fetch(){
+    getApiData()
+      .then(characters => this.setState({ characters }));
+  }
+
+  handleClick = ({ target }) => {
+    this.setState({ oneChar: target.value });
+  }
+
+  render(){
+    return (
+      <>
+        <Header />
+        <HeyArnoldList onClick={this.handleClick} characters={this.state.characters} />
+      </>
+    );
+  }
+}
+
+export default Final;

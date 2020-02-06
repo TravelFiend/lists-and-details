@@ -15,13 +15,18 @@
     width: 250px;
     border: 2px solid black;
     border-radius: 20px;
+    border-left-color: rgb(201, 201, 184);
+    border-top-color: rgb(201, 201, 184);
   }
 
   img {
     max-height: 170px;
+    background: rgb(174, 176, 138);
     margin: 15px;
     padding: 5px;
-    border: 2px solid black;
+    border: 2px solid rgb(240, 240, 236);
+    border-right-color: rgb(130, 130, 60);
+    border-bottom-color: rgb(130, 130, 60);
     border-radius: 10px;
   }
 }
