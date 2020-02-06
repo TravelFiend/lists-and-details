@@ -4,7 +4,7 @@ import getApiData from '../../services/getApiData';
 import HeyArnoldList from './HeyArnoldList';
 import Paging from '../paging/Paging';
 
-class Final extends Component {
+class HeyArnold extends Component {
   state = {
     characters: [],
     oneChar: '',
@@ -28,14 +28,14 @@ class Final extends Component {
     if(this.state.pageNum === 1){
       return;
     }
-    this.setState(prevState => ({ pageNum: prevState.pageNum - 1 }));
+    this.setState((prevState) => ({ pageNum: prevState.pageNum - 1 }));
   }
 
   handleForwardClick() {
     if(this.state.pageNum === 11){
       return;
     }
-    this.setState(prevState => ({ pageNum: prevState.pageNum + 1 }));
+    this.setState((prevState) => ({ pageNum: prevState.pageNum + 1 }));
   }
 
   render(){
@@ -49,4 +49,4 @@ class Final extends Component {
   }
 }
 
-export default Final;
+export default HeyArnold;

@@ -11,7 +11,7 @@ const Paging = ({ pageNum, onBackClick, onForwardClick }) => (
 );
 
 Paging.propTypes = {
-  pageNum: PropTypes.string.isRequired,
+  pageNum: PropTypes.number.isRequired,
   onBackClick: PropTypes.func.isRequired,
   onForwardClick: PropTypes.func.isRequired
 };
