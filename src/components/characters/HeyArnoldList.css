@@ -3,6 +3,7 @@
   font-size: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 
   li {
@@ -15,13 +16,18 @@
     width: 250px;
     border: 2px solid black;
     border-radius: 20px;
+    border-left-color: rgb(240, 240, 236);
+    border-top-color: rgb(240, 240, 236);
   }
 
   img {
     max-height: 170px;
+    background: rgb(174, 176, 138);
     margin: 15px;
     padding: 5px;
-    border: 2px solid black;
+    border: 2px solid rgb(240, 240, 236);
+    border-right-color: rgb(130, 130, 60);
+    border-bottom-color: rgb(130, 130, 60);
     border-radius: 10px;
   }
 }
